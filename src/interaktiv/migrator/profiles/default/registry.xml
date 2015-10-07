@@ -1,0 +1,4 @@
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="plone">
+  <records interface="interaktiv.migrator.interfaces.IConfiguration" />
+</registry>
