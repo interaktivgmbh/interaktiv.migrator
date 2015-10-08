@@ -15,7 +15,8 @@ class ExportContentForm(form.Form):
     def description(self):
         registry = queryUtility(IRegistry)
         settings = registry.forInterface(IConfiguration, check=False)
-        return "<b>Target URL</b>: %s" % settings.target_url
+        url = settings.target_url
+        return "<b>Export to (Target URL):</b> %s" % url
 
     @button.buttonAndHandler(u'Export Content')
     def handle_import_stuff(self, action):
@@ -24,6 +25,12 @@ class ExportContentForm(form.Form):
 
 
 class ExportReferencesForm(form.Form):
+
+    def description(self):
+        registry = queryUtility(IRegistry)
+        settings = registry.forInterface(IConfiguration, check=False)
+        url = settings.target_url
+        return "<b>Export References to (Target URL)</b>: %s" % url
 
     @button.buttonAndHandler(u'Export References')
     def handle_import_stuff(self, action):
