@@ -1,8 +1,0 @@
-setuptools
-collective.transmogrifier
-plone.app.theming
-plone.api
-
-[test]
-plone.app.testing
-unittest2
