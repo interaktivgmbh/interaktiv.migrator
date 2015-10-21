@@ -186,7 +186,7 @@ class ImportUtility(object):
         if not isinstance(creators, list):
             creators = [creators]
 
-        user = api.user.get(str(creators[0]))
+        user = api.user.get(unicode(creators[0]))
         if not user:
             return
         obj.changeOwnership(user)
